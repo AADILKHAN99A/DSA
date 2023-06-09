@@ -2,35 +2,42 @@
 
 using namespace std;
 
-int linearsearch(int a[],int n)
+int linearsearch(int a[],int n,int size)
 {
 
-
-	for(int i =0; i<sizeof(a);i++)
+	for(int i =0; i<size;i++)
 	{
 		if(n==a[i])
-		{
-			return 1;
+		{	
+			
+			
+			return i;
 		}
 		
 	}
+	return -1;
+	
+		
 }
 
 int main()
 {
-	int arr[5]= {1,2,5,7,9};
+	int arr[]= {1,2,5,7,9,6,4,5,3};
+	
 	int key;
 	cout<<"Enter Search Element: ";
 	cin>>key;
-	cout<<sizeof(arr);
-	int result = linearsearch(arr,key);
-	if(result==1)
+	int size = sizeof(arr)/sizeof(arr[0]);
+	
+	int result = linearsearch(arr,key,size);
+	
+	if(result==-1)
 	{
-		cout<<"Element found!";
+		cout<<"Element is not found"<<endl;
 	}
 	else
 	{
-		cout<<"Element not found";
+		cout<<"Element is found at position: "<<result+1;
 	}
 	
 	
