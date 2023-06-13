@@ -30,10 +30,6 @@ int main()
 			}
 		}
 			swap(arr,minIndex,i);
-	for(int i =0;i<size;i++){
-		cout<<arr[i]<<" ";
-	}
-	cout<<endl;
 	}
 	
 		for(int i =0;i<size;i++){
